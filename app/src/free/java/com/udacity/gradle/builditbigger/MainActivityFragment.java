@@ -1,7 +1,8 @@
-package com.udacity.gradle.builditbigger.free;
+package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,12 +14,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import com.example.antho_000.myapplication.backend.myApi.MyApiRequest;
 
 import com.example.android.mylibrary.jokeFactory;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.udacity.gradle.builditbigger.EndpointAsynaTask;
 import com.udacity.gradle.builditbigger.R;
+
+import static android.os.AsyncTask.execute;
 
 public class MainActivityFragment extends Fragment {
     public boolean testFlag = false;
@@ -48,7 +52,7 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
-        progressBar = (ProgressBar) root.findViewById(R.id.joke_progressbar);
+        progressBar = (ProgressBar) root.findViewById(R.id.joke_progressBar);
         progressBar.setVisibility(View.GONE);
 
 
@@ -61,7 +65,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void getJoke() {
-        new EndpointAsynaTask().execute((Runnable) this);
+        new EndpointAsynaTask().execute(this);
     }
 
     public void launchDisplayJokeActivity() {

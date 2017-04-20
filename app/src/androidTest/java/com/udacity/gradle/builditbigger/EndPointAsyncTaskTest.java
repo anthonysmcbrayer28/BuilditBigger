@@ -9,6 +9,7 @@ import android.support.test.runner.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.R.attr.fragment;
 import static org.junit.Assert.assertTrue;
 /**
  * Created by kev on 3/21/16.

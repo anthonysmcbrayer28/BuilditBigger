@@ -1,9 +1,0 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <application>
-        <activity
-            android:name="com.udacity.gradle.builditbigger.paid.MainActivityFragment"
-            android:label="@string/title_activity_main_fragment"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-    </application>
-</manifest>

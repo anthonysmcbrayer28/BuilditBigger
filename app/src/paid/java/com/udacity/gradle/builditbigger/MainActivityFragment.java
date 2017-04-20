@@ -1,7 +1,8 @@
-package com.udacity.gradle.builditbigger.paid;
+package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,10 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.support.v4.app.Fragment;
 
 import com.example.android.mylibrary.jokeFactory;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.udacity.gradle.builditbigger.EndpointAsynaTask;
 import com.udacity.gradle.builditbigger.R;
 
@@ -33,7 +33,6 @@ public class MainActivityFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
 
 
-
         // Set onClickListener for the button
         Button button = (Button) root.findViewById(R.id.button_text);
         button.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +49,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void getJoke() {
-        new EndpointAsynaTask().execute((Runnable) this);
+        new EndpointAsynaTask().execute(this);
     }
 
     public void launchDisplayJokeActivity() {

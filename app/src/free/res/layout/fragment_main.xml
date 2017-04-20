@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivityFragment">
+    tools:context="MainActivityFragment">
 
     <TextView
         android:id="@+id/instructions_text_view"
@@ -36,13 +36,12 @@
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
-
     <ProgressBar
-        android:id="@+id/joke_progressbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        />
+        android:id="@+id/joke_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
 
 </RelativeLayout>
 
