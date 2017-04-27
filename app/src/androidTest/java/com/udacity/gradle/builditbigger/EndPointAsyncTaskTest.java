@@ -11,9 +11,7 @@ import org.junit.runner.RunWith;
 
 import static android.R.attr.fragment;
 import static org.junit.Assert.assertTrue;
-/**
- * Created by kev on 3/21/16.
- */
+
 
 @RunWith(AndroidJUnit4.class)
 public class EndPointAsyncTaskTest {
@@ -23,7 +21,7 @@ public class EndPointAsyncTaskTest {
         com.udacity.gradle.builditbigger.MainActivityFragment fragment = new com.udacity.gradle.builditbigger.MainActivityFragment();
         fragment.testFlag = true;
         new EndpointAsynaTask().execute(fragment);
-        Thread.sleep(5000);
-        assertTrue("Error: Fetched Joke = " + fragment.loadedJoke, fragment.loadedJoke != null);
+        Thread.sleep(4000);
+        assertTrue("Error: get Joke = " + fragment.loadedJoke, fragment.loadedJoke != null);
     }
 }
