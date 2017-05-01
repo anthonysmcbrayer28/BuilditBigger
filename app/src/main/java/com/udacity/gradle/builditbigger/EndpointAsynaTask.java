@@ -19,6 +19,10 @@ public class EndpointAsynaTask extends AsyncTask<MainActivityFragment, Void, Str
     private static MyApi myApiService = null;
     private MainActivityFragment mainActivityFragment;
 
+    public EndpointAsynaTask(Context context, Object o) {
+
+    }
+
     @Override
     protected String doInBackground(MainActivityFragment... params) {
         mainActivityFragment = params[0];
